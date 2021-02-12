@@ -12,6 +12,13 @@ namespace MCV
         private static EnumerableOptions? _enumerableoptions;
         private static List<int> _tracker;
         private static string _id;
+
+        /// <summary>
+        /// recursively checks if properties of the object are assigned
+        /// </summary>
+        /// <param name="obj">model</param>
+        /// <param name="configuration">configuration</param>
+        /// <returns></returns>
         public static bool HasNullOrEmptyProperties(this object obj, Configuration configuration = null)
         {
             try
